@@ -17,14 +17,16 @@ Cobra software for rockets with RaspberryPi Pico control centre in Micropython
 Connect the circuit exactly as shown on the image below, you can simply change pins in the **setup.py** file.
 You have to download this external files **imu.py**, **vector3d.py** from [github][MPUEXTERNALFILES]
 :warning: It may take a few tens of seconds for the output to stabilize.
-[Nice tutorial about connecting MPU6050 with RaspberryPi Pico on peppe8o.com][MPU6050Link]
+
+- [Nice tutorial about connecting MPU6050 with RaspberryPi Pico on peppe8o.com][MPU6050Link]
 
 ### Wiring GPS Neo-6M
 
 ![GPS wiring][GPSImage]
-Connect the circuit exactly as shown on the image below, you can simply change pins in the **setup.py** file.
+Connect GND to GND, 3v3(OUT) to VCC, GP4 to RX and GP5 to TX, you can simply change pins in the **setup.py** file.
 :warning: GPS module should be ideally outside to work correctly. Otherwise it will just print no data.
-[Article about GPS module with RaspberryPi Pico on microcontrollerslab.com][GPSLink]
+
+- [Article about GPS module with RaspberryPi Pico on microcontrollerslab.com][GPSLink]
 
 ### Wiring Buttons and LEDs
 
@@ -57,5 +59,5 @@ Known problems:
 [MPU6050Image]: https://raw.githubusercontent.com/foglar/Cobra-Project/main/Raspberry-PI-Pico-MPU6050.webp
 [MPU6050Link]: https://peppe8o.com/using-gyroscope-and-accelerometer-with-mpu6050-raspberry-pi-pico-and-micropython/
 
-[GPSImage]: https://raw.githubusercontent.com/foglar/Cobra-Project/main/Raspberry-PI-Pico-NEO6M.jpg
+[GPSImage]: https://raw.githubusercontent.com/foglar/Cobra-Project/main/Raspberry-Pi-Pico-NEO6M.jpg
 [GPSLink]: https://microcontrollerslab.com/neo-6m-gps-module-raspberry-pi-pico-micropython/
