@@ -7,9 +7,9 @@ Cobra software for rockets with RaspberryPi Pico control centre in Micropython
 
 ## Quick startguide
 
-If you don't have any previous experience with RaspberryPi Pico, you can start with [this tutorial][pico-GetStarted] to quickly get started with it.
-[Tutorial about connecting RaspberryPi Pico with MPU6050][MPU6050Link]
-[Tutorial about connecting RaspberryPi Pico with GPS module][GPSLink]
+- If you don't have any previous experience with RaspberryPi Pico, you can start with [this tutorial][pico-GetStarted] to quickly get started with it.
+- [Tutorial about connecting RaspberryPi Pico with MPU6050][MPU6050Link]
+- [Tutorial about connecting RaspberryPi Pico with GPS module][GPSLink]
 
 ### Wiring MPU6050
 
@@ -45,8 +45,8 @@ After collecting data to the files download them to the same directory as **grap
 
 Known problems:
 
-* Time is reseted while not connected to PC or GPS satellite to the 2021/1/1
-* GPS module is weak and often doesn't establish connection with satellites
+- Time is reseted while not connected to PC or GPS satellite to the 2021/1/1
+- GPS module is weak and often doesn't establish connection with satellites
 
 [czechLangBadge]: https://img.shields.io/badge/MADE%20IN-CZECH-red?style=for-the-badge
 [codeLinesBadge]: https://img.shields.io/tokei/lines/github/foglar/Cobra-Project?color=green&style=for-the-badge
@@ -54,8 +54,8 @@ Known problems:
 [pico-GetStarted]: https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico
 
 [MPUEXTERNALFILES]: https://github.com/micropython-IMU/micropython-mpu9x50
-[MPU6050Image]: https://raw.githubusercontent.com/foglar/Cobra-Project/BETA/Raspberry-PI-Pico-MPU6050.webp
+[MPU6050Image]: https://raw.githubusercontent.com/foglar/Cobra-Project/main/Raspberry-PI-Pico-MPU6050.webp
 [MPU6050Link]: https://peppe8o.com/using-gyroscope-and-accelerometer-with-mpu6050-raspberry-pi-pico-and-micropython/
 
-[GPSImage]: https://raw.githubusercontent.com/foglar/Cobra-Project/BETA/Raspberry-PI-Pico-NEO6M.jpg
+[GPSImage]: https://raw.githubusercontent.com/foglar/Cobra-Project/main/Raspberry-PI-Pico-NEO6M.jpg
 [GPSLink]: https://microcontrollerslab.com/neo-6m-gps-module-raspberry-pi-pico-micropython/
