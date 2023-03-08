@@ -122,3 +122,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+./rocketBundle/dataFile.csv
+./rocketBundle/dataFileGPS.csv
+./analysis/dataFile.csv
+./analysis/dataFileGPS.csv
