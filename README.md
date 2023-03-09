@@ -2,8 +2,15 @@
 
 ![Czech][czechLangBadge]
 ![Lines of code][codeLinesBadge]
+![GitHub issues](https://img.shields.io/github/issues/foglar/Cobra-Project?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/foglar/Cobra-Project?style=for-the-badge)
 
 Cobra software for rockets with RaspberryPi Pico control centre in Micropython
+
+[![CodeFactor](https://www.codefactor.io/repository/github/foglar/cobra-project/badge)](https://www.codefactor.io/repository/github/foglar/cobra-project)
+![GitHub top language](https://img.shields.io/github/languages/top/foglar/Cobra-Project)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/foglar/Cobra-Project)
+![GitHub Repo stars](https://img.shields.io/github/stars/foglar/Cobra-Project?style=social)
 
 ## Quick startguide
 
