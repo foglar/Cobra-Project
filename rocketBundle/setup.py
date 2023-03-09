@@ -1,4 +1,4 @@
-import time
+import time, sys
 from machine import Pin
 
 # Pins setup
@@ -9,7 +9,7 @@ ledErrorPin = 12  # LED to show if there is an error
 gyroscopeSDAPin, gyroscopeSCLPin = 0, 1  # Set your own values
 # GPS
 gpsTXPin, gpsRXPin = 4, 5  # Set your own values
-ledOnOff = Pin('LED', Pin.OUT)  # LED on or off
+ledOnOff = Pin("LED", Pin.OUT)  # LED on or off
 
 # External connections initialisation
 button = Pin(buttonPin, Pin.IN, Pin.PULL_UP)
@@ -30,3 +30,17 @@ def timeNow():
         currentTime[5],
     )
     return ctime
+
+
+def end():
+    print("Keyboard interrupt detected. Exiting...")
+    for i in range(3):
+        ledOnOff.value(0)
+        ledState.value(0)
+        ledError.value(0)
+        time.sleep(1)
+        ledOnOff.value(1)
+        ledState.value(1)
+        ledError.value(1)
+        time.sleep(1)
+    sys.exit()

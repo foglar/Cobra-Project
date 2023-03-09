@@ -1,7 +1,6 @@
 from imu import MPU6050
 from machine import Pin, I2C
-import sys
-from setup import timeNow, gyroscopeSDAPin as pinSDA, gyroscopeSCLPin as pinSCL
+from setup import timeNow, gyroscopeSDAPin as pinSDA, gyroscopeSCLPin as pinSCL, end
 
 # Initialisation of MPU6050 communication
 i2c = I2C(0, sda=Pin(pinSDA), scl=Pin(pinSCL), freq=400000)
@@ -37,9 +36,7 @@ def collectGAData():
 
     # Check for keyboard interrupt
     except KeyboardInterrupt:
-        print("Bye..")
-        dataFile.close()
-        sys.exit()
+        end()
 
 
 # Main loop
