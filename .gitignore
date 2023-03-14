@@ -127,3 +127,5 @@ dmypy.json
 ./rocketBundle/dataFileGPS.csv
 ./analysis/dataFile.csv
 ./analysis/dataFileGPS.csv
+
+.vscode

@@ -1,5 +1,5 @@
 import gyroscopeAccelerometr as ga
-import gps, time
+import gps, time, temperature as temp
 from setup import button, ledState, ledOnOff, ledError, end
 
 
@@ -15,6 +15,7 @@ def main():
                     ledError.value(0)
                     gps.collectGPSData(gps.gpsModule)
                     ga.collectGAData()
+                    temp.collectTempData()
                 except KeyboardInterrupt:
                     end()
                 except Exception:

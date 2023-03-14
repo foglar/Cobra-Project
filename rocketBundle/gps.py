@@ -1,6 +1,5 @@
 from machine import Pin, UART, I2C
 from setup import timeNow, gpsTXPin as tx, gpsRXPin as rx
-import time
 
 # Initialisation of GPS communication
 gpsModule = UART(1, baudrate=9600, tx=tx, rx=rx)

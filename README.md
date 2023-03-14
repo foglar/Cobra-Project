@@ -1,3 +1,4 @@
+![logo](cobra-logo.png)
 # CoBraSoftware
 
 ![Czech][czechLangBadge]
@@ -5,7 +6,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/foglar/Cobra-Project?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/foglar/Cobra-Project?style=for-the-badge)
 
-## Computer operating ballistic rocket assembly
+## computer operating ballistic rocket assembly
 
 CoBra software for rockets with RaspberryPi Pico control centre in Micropython
 

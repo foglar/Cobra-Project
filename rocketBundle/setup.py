@@ -10,6 +10,9 @@ gyroscopeSDAPin, gyroscopeSCLPin = 0, 1  # Set your own values
 # GPS
 gpsTXPin, gpsRXPin = 4, 5  # Set your own values
 ledOnOff = Pin("LED", Pin.OUT)  # LED on or off
+# Temperature and Humidity
+tempSDAPin, tempSCLPin = 16, 17  # Set your own values
+
 
 # External connections initialisation
 button = Pin(buttonPin, Pin.IN, Pin.PULL_UP)
@@ -17,6 +20,8 @@ ledState = Pin(ledStatePin, Pin.OUT)
 ledError = Pin(ledErrorPin, Pin.OUT)
 gpsRXPin = Pin(gpsRXPin)
 gpsTXPin = Pin(gpsTXPin)
+tempSCLPin = Pin(tempSCLPin)
+tempSDAPin = Pin(tempSDAPin)
 
 # Get current time
 def timeNow():
