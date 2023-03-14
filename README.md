@@ -1,11 +1,13 @@
-# CobraSoftware
+# CoBraSoftware
 
 ![Czech][czechLangBadge]
 ![Lines of code][codeLinesBadge]
 ![GitHub issues](https://img.shields.io/github/issues/foglar/Cobra-Project?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/foglar/Cobra-Project?style=for-the-badge)
 
-Cobra software for rockets with RaspberryPi Pico control centre in Micropython
+## Computer operating ballistic rocket assembly
+
+CoBra software for rockets with RaspberryPi Pico control centre in Micropython
 
 [![CodeFactor](https://www.codefactor.io/repository/github/foglar/cobra-project/badge)](https://www.codefactor.io/repository/github/foglar/cobra-project)
 ![GitHub top language](https://img.shields.io/github/languages/top/foglar/Cobra-Project)
@@ -33,21 +35,50 @@ Cobra software for rockets with RaspberryPi Pico control centre in Micropython
 
 Connect the circuit exactly as shown on the image below, you can simply change pins in the **setup.py** file.
 You have to download this external files **imu.py**, **vector3d.py** from [github][MPUEXTERNALFILES]
-:warning: It may take a few tens of seconds for the output to stabilize.
+:warning: **It may take a few tens of seconds for the output to stabilize.**
 
 - [Nice tutorial about connecting MPU6050 with RaspberryPi Pico on peppe8o.com][MPU6050Link]
+
+| Raspberry Pi Pico | MPU6050 |
+| ----------------- | ------- |
+| 3v3               | VCC     |
+| GND               | GND     |
+| GP0               | SDA     |
+| GP1               | SCL     |
 
 ### Wiring GPS Neo-6M
 
 Connect GND to GND, 3v3(OUT) to VCC, GP4 to RX and GP5 to TX, you can simply change pins in the **setup.py** file.
-:warning: GPS module should be ideally outside to work correctly. Otherwise it will just print no data.
+:warning: **GPS module should be ideally outside to work correctly. Otherwise it will just print no data.**
 
 - [Article about GPS module with RaspberryPi Pico on microcontrollerslab.com][GPSLink]
+
+| Raspberry Pi Pico | GPS Neo-6M |
+| ----------------- | ---------- |
+| 3v3               | VCC        |
+| GND               | GND        |
+| GP4               | RX         |
+| GP5               | TX         |
 
 ### Wiring Buttons and LEDs
 
 Connect **first LED** to the **GP9** and GND, and **second LED** to the **GP12** and GND, don't forget about resistors.
 **Button** is connected defaultly on the **GP7** and connected to GND obviously. After pressing button first LED should light on, and pico should start writing data to the files (printing to the console in [thonny][thonnyLink]). If something fails, second LED should brighten up.
+
+| Raspberry Pi Pico | LED |
+| ----------------- | --- |
+| GP9               | +   |
+| GND               | -   |
+
+| Raspberry Pi Pico | LED 2 |
+|-------------------|-------|
+| GP12              | +     |
+| GND               | -     |
+
+| Raspberry Pi Pico | Button |
+| ----------------- | ------ |
+| GP7               | -      |
+| GND               | -      |
 
 ### Setting up
 

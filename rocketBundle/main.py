@@ -22,10 +22,10 @@ def main():
                 
                 if button.value() == 1:
                     ledState.value(0)
+                    time.sleep(1)
                     break
         else:
             ledState.value(0)
-        time.sleep(0.1)
                 
 if __name__ == "__main__":
     main()
