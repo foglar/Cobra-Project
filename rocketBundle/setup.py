@@ -1,4 +1,4 @@
-import time, sys
+import time, sys, gps, gyroscopeAccelerometr as ga, temperature as temp
 from machine import Pin
 
 # Pins setup
@@ -49,3 +49,12 @@ def end():
         ledError.value(1)
         time.sleep(1)
     sys.exit()
+
+def saveData():
+    f = open("data.csv", "a")
+    gps_data = gps.collectGPSData(gps.gpsModule)
+    gyro_accelero = ga.collectGAData()
+    temperature = temp.collectTempData()
+    f.write(
+        f"{timeNow()}, {gps_data}, {gyro_accelero}, {temperature}\n"
+    )

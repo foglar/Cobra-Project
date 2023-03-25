@@ -7,42 +7,39 @@ buff = bytearray(255)
 
 # Get output from Neo6M
 def collectGPSData(gpsModule):
-
+    data = []
     buff = str(gpsModule.readline())
     parts = buff.split(",")
-    dataFile = open("dataFileGPS.csv", "a")
     if parts[0][:2] == "b'":
         
         buff = buff.replace("b'", '')
         
         if parts[0] == "b'$GPGGA":
             print(buff)
-            dataFile.write(
+            data.append(
                 "%s, %s\n"
                 % (timeNow(), buff)
             )
-        elif parts[0] == "b'$GPRMC":
+        if parts[0] == "b'$GPRMC":
             print(buff)
-            dataFile.write(
+            data.append(
                 "%s, %s\n"
                 % (timeNow(), buff)
             )
-        elif parts[0] == "b'$GPGSA":
+        if parts[0] == "b'$GPGSA":
             print(buff)
-            dataFile.write(
+            data.append(
                 "%s, %s\n"
                 % (timeNow(), buff)
             )
-        elif parts[0] == "b'$GPGSV":
+        if parts[0] == "b'$GPGSV":
             print(buff)
-            dataFile.write(
+            data.append(
                 "%s, %s\n"
                 % (timeNow(), buff)
             )
-        else:
-            print("No GPS data", end="\n")
+    return data
 
-    dataFile.close()
 
 
 # Convert values to degrees
@@ -60,8 +57,7 @@ def convertToDegree(RawDegrees):
 # Main loop
 def main():
     while True:
-
-        collectGPSData(gpsModule)
+        print(collectGPSData(gpsModule), end="\r")
 
 
 if __name__ == "__main__":

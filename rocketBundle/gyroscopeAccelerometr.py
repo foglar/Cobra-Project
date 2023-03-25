@@ -10,7 +10,6 @@ imu = MPU6050(i2c)
 def collectGAData():
     try:
         # Open csv table for input
-        dataFile = open("dataFile.csv", "a")
 
         # Save output to variables
         ax = round(imu.accel.x, 2)
@@ -26,17 +25,13 @@ def collectGAData():
             "TIME: %s | aX: %s  aY: %s  aZ: %s  gX: %s  gY: %s  gZ: %s  Temperature: %s     \n"
             % (timeNow(), ax, ay, az, gx, gy, gz, tem)
         )
-        dataFile.write(
-            "%s, %s, %s, %s, %s, %s, %s, %s\n"
-            % (timeNow(), ax, ay, az, gx, gy, gz, tem)
-        )
 
-        # Delay and Close File
-        dataFile.close()
+        return ax, ay, az, gx, gy, gz, tem
 
     # Check for keyboard interrupt
     except KeyboardInterrupt:
         end()
+    
 
 
 # Main loop

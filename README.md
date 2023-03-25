@@ -1,4 +1,6 @@
+
 ![logo](cobra-logo.png)
+
 # CoBraSoftware
 
 ![Czech][czechLangBadge]
@@ -8,8 +10,6 @@
 
 ## Computer Operating Ballistic Rocket Assembly
 
-CoBra software for rockets with RaspberryPi Pico control centre in Micropython
-
 [![CodeFactor](https://www.codefactor.io/repository/github/foglar/cobra-project/badge)](https://www.codefactor.io/repository/github/foglar/cobra-project)
 ![GitHub top language](https://img.shields.io/github/languages/top/foglar/Cobra-Project)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/foglar/Cobra-Project)
@@ -17,11 +17,13 @@ CoBra software for rockets with RaspberryPi Pico control centre in Micropython
 
 ## Quick startguide
 
+CoBra software for rockets with RaspberryPi Pico control centre in Micropython
+
 ### Preparation
 
 - Download Thonny IDE from [here][thonnyLink]
 - We are using [RaspberryPi Pico][raspberryPiPico] and [Micropython][micropython], so you have to download UF2 bootloader for [RaspberryPi Pico][micropythonLink] or [RaspberryPi Pico W][micropythonLinkW]
-- We use **[MPU6050][MPU6050Link]** and **[GPS Neo-6M][GPSLink]** modules with **TP4056 USB-C Li-Pol bateries charger** and **Li-Pol battery**. But you can adapt the code for your hardware modules. You also need 2 **leds** and one **button**
+- We use **[MPU6050][MPU6050Link]**, **[GPS Neo-6M][GPSLink]** and **BME280** modules with **TP4056 USB-C Li-Pol bateries charger** and **Li-Pol battery**. But you can adapt the code for your hardware modules. You also need 2 **leds** and one **button**
 - For using our graphing program you have to install **matplotlib** library ```pip3 install matplotlib```
 
 ### Learn more about it
@@ -34,18 +36,21 @@ CoBra software for rockets with RaspberryPi Pico control centre in Micropython
 
 ### Wiring MPU6050
 
-Connect the circuit exactly as shown on the image below, you can simply change pins in the **setup.py** file.
+Connect the circuit exactly as shown on the image below, or you can simply change pins in the **setup.py** file.
 You have to download this external files **imu.py**, **vector3d.py** from [github][MPUEXTERNALFILES]
 :warning: **It may take a few tens of seconds for the output to stabilize.**
 
 - [Nice tutorial about connecting MPU6050 with RaspberryPi Pico on peppe8o.com][MPU6050Link]
 
-| Raspberry Pi Pico | MPU6050 |
-| ----------------- | ------- |
-| 3v3               | VCC     |
-| GND               | GND     |
-| GP0               | SDA     |
-| GP1               | SCL     |
+| Raspberry Pi Pico                          | MPU6050 |
+| ------------------------------------------ | ------- |
+| **3v3**                                    | VCC     |
+| **GND**                                    | GND     |
+| **I2C0 SDA** (GP0/GP4/GP8/GP12/GP16/GP20)  | SDA     |
+| **I2C0 SCL** (GP1/GP5/GP9/GP13/GP17/GP21)  | SCL     |
+| or                                         |         |
+| **I2C1 SDA** (GP2/GP6/GP10/GP14/GP24/GP26) | SDA     |
+| **I2C1 SCL** (GP3/GP7/GP11/GP15/GP25/GP27) | SCL     |
 
 ### Wiring GPS Neo-6M
 
@@ -54,12 +59,15 @@ Connect GND to GND, 3v3(OUT) to VCC, GP4 to RX and GP5 to TX, you can simply cha
 
 - [Article about GPS module with RaspberryPi Pico on microcontrollerslab.com][GPSLink]
 
-| Raspberry Pi Pico | GPS Neo-6M |
-| ----------------- | ---------- |
-| 3v3               | VCC        |
-| GND               | GND        |
-| GP4               | RX         |
-| GP5               | TX         |
+| Raspberry Pi Pico        | GPS Neo-6M |
+| ------------------------ | ---------- |
+| **3v3(OUT)**             | VCC        |
+| **GND**                  | GND        |
+| **UART0** (GP0/GP16)     | RXD        |
+| **UART0** (GP1/GP17)     | TXD        |
+| or                       |            |
+| **UART1** (GP4/GP8/GP12) | TXD        |
+| **UART1** (GP5/GP9/GP13) | RXD        |
 
 ### Wiring Buttons and LEDs
 
@@ -72,7 +80,7 @@ Connect **first LED** to the **GP9** and GND, and **second LED** to the **GP12**
 | GND               | -   |
 
 | Raspberry Pi Pico | LED 2 |
-|-------------------|-------|
+| ----------------- | ----- |
 | GP12              | +     |
 | GND               | -     |
 
@@ -103,8 +111,15 @@ Known problems:
 - Time is reseted while not connected to PC or GPS satellite to the 2021/1/1
 - GPS module is weak and often doesn't establish connection with satellites
 
+### Future Updates
+
+- [ ] Add temperature and humidity sensor BME 280
+- [ ] Connect with tranciever module, to send data on fly to arduino
+- [ ] Simplify data writing to the files and code in general
+- [ ] Add more graphs and analysis to the graphing program
+- [ ] Map view of GPS coordinates live and Gyroscope and Accelerometer data live on the go
+
 [czechLangBadge]: https://img.shields.io/badge/MADE%20IN-CZECH-red?style=for-the-badge
-[codeLinesBadge]: https://img.shields.io/tokei/lines/github/foglar/Cobra-Project?color=green&style=for-the-badge
 
 [raspberryPiPico]: https://www.raspberrypi.com/products/raspberry-pi-pico/
 
