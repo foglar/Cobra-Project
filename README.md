@@ -10,6 +10,8 @@
 
 ## Computer Operating Ballistic Rocket Assembly
 
+## Soon we will move from raspberry pi pico to arduino micro!!!
+
 [![CodeFactor](https://www.codefactor.io/repository/github/foglar/cobra-project/badge)](https://www.codefactor.io/repository/github/foglar/cobra-project)
 ![GitHub top language](https://img.shields.io/github/languages/top/foglar/Cobra-Project)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/foglar/Cobra-Project)
