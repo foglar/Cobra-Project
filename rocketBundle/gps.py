@@ -17,26 +17,26 @@ def collectGPSData(gpsModule):
         if parts[0] == "b'$GPGGA":
             print(buff)
             data.append(
-                "%s, %s\n"
-                % (timeNow(), buff)
+                "%s\n"
+                % (buff)
             )
         if parts[0] == "b'$GPRMC":
             print(buff)
             data.append(
-                "%s, %s\n"
-                % (timeNow(), buff)
+                "%s\n"
+                % (buff)
             )
         if parts[0] == "b'$GPGSA":
             print(buff)
             data.append(
-                "%s, %s\n"
-                % (timeNow(), buff)
+                "%s\n"
+                % (buff)
             )
         if parts[0] == "b'$GPGSV":
             print(buff)
             data.append(
-                "%s, %s\n"
-                % (timeNow(), buff)
+                "%s\n"
+                % (buff)
             )
     return data
 
