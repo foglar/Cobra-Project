@@ -129,3 +129,18 @@ dmypy.json
 ./analysis/dataFileGPS.csv
 
 .vscode
+cobraMonitor/builds/linux-amd64/data/
+
+cobraMonitor/builds/linux-amd64/java/conf/
+
+cobraMonitor/builds/linux-amd64/java/include/
+
+cobraMonitor/builds/linux-amd64/java/jmods/
+
+cobraMonitor/builds/linux-amd64/java/
+
+cobraMonitor/builds/linux-amd64/source/
+
+cobraMonitor/builds/windows-amd64/data/
+
+cobraMonitor/builds/windows-amd64/source/
