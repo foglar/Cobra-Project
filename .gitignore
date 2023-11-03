@@ -129,6 +129,9 @@ dmypy.json
 ./analysis/dataFileGPS.csv
 
 .vscode
+
+cobraMonitor/builds/
+
 cobraMonitor/builds/linux-amd64/data/
 
 cobraMonitor/builds/linux-amd64/java/conf/
